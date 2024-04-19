@@ -4,6 +4,8 @@ $sum = 1 + 1; // 2
 $diff = 2 - 1; // 1
 $product = 2 * 2; // 4
 $quotient = 2 / 1; // 2
+$remainder = 3 % 2; // 1
+$power = 2 ** 3; // 8
 
 // Taquigrafia aritmetica
 $num = 0;

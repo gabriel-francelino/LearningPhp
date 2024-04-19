@@ -1,20 +1,21 @@
 <?php
-// Variáveis ​​podem ser convertidas entre tipos, dependendo de seu uso. 
-// PHP faz isso automaticamente quando necessário.
-$integer = 1;
-echo $integer + $integer; // => 2
+/*
+Variáveis ​​podem ser convertidas entre tipos, dependendo de seu uso. 
+PHP faz isso automaticamente quando necessário.
+*/
 
-$string = '1';
-echo $string + $string; // => 2 (strings are coerced to integers)
+echo 1 + 1, "\n"; // => 2
+echo 1 + "1", "\n"; // => 2
+echo "1" + 1, "\n"; // => 2
+echo "1" + "1", "\n"; // => 2
 
-$string = 'one';
-// $string + $string; // => error 
-// Gera 0 porque o operador + não pode converter a string 'one' em um número 
+// echo "str" + "str", "\n"; // => 0 para versoes do PHP < 7.4
+// echo "10 dolares" + "101 dalmatas", "\n"; // => 111 para versoes do PHP < 7.4
+// echo "str" + "str", "\n"; // => fatal error para versoes do PHP >= 7.4]
 
 // Você pode converter explicitamente tipos de variáveis
 $boolean = (bool) 1; // => true
-$zero = 0;
-$boolean = (bool) $zero; // => false
+$boolean = (bool) 0; // => false
 
 // Existem também funções dedicadas para converter a maioria dos tipos
 $integer = 5;

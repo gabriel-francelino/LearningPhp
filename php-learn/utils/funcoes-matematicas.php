@@ -13,6 +13,8 @@ echo floor(3.2); // 3
 // Função para gerar um número aleatório
 echo rand(1, 10); // 1 a 10
 
+echo mt_rand(0, 100); // mais recomendado a partir do PHP 7.1
+
 // Função divisão inteira
 echo intdiv(10, 3); // 3
 

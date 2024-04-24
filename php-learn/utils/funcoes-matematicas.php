@@ -27,6 +27,9 @@ echo max(1, 2, 3, 4, 5); // 5
 // Função para calcular a raiz quadrada
 echo sqrt(9); // 3
 
+// Função para calcular a raiz cúbica
+echo pow(8, 1/3); // 2
+
 // Função para calcular a potência
 echo pow(2, 3); // 8
 

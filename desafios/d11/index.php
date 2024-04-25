@@ -18,8 +18,8 @@
         <form action="<?= $_SERVER['PHP_SELF'] ?>" method="get">
             <label for="preco">Preço do produto (R$)</label>
             <input type="number" name="preco" id="preco" step="0.01" value="<?=$preco?>">
-            <label for="porcentagem">Qual será o porcentual de reajuste? (<strong><?=$porcentagem*100?>%</strong>)</label>
-            <input type="range" name="porcentagem" id="porcentagem" min="0" max="1" step="0.01" value="<?=$porcentagem?>">
+            <label for="porcentagem">Qual será o porcentual de reajuste? (<strong><span id="p">?</span>%</strong>)</label>
+            <input type="range" name="porcentagem" id="porcentagem" min="0" max="1" step="0.01" value="<?=$porcentagem?>" oninput="mudaValor()">
             <input type="submit" value="Reajustar">
         </form>
     </main>
@@ -34,6 +34,13 @@
             echo "<p>O produto que custava R$" . format($preco) . ", com " . ($porcentagem*100) . "% de aumento vai passar a custar R$" . format($reajuste) . " a partir de agora.</p>";
         ?>
     </section>
+    <script>
+        mudaValor();
+
+        function mudaValor() {
+            p.innerText = porcentagem.value * 100;
+        }
+    </script>
 </body>
 
 </html>
